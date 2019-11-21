@@ -7,6 +7,6 @@ server:
   
 amazonProperties:
   endpointUrl: https://s3.amazonaws.com
-  accessKey: [xxxxxxxx]
-  secretKey: [xxxxxxxx]
-  bucketName: brij-bucket
+  accessKey: [your access key]
+  secretKey: [your secret key]
+  bucketName: [your bucket]

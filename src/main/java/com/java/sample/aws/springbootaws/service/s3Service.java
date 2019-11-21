@@ -53,11 +53,16 @@ public class s3Service {
 	
 	public String listFile()
 	{
+		StringBuffer strBuf = new StringBuffer();
 		List<Bucket> buckets = s3client.listBuckets();
+		strBuf.append("<li>");
 		for(Bucket bucket : buckets) {
-		    System.out.println(bucket.getName());
+			strBuf.append("<ul>");
+			strBuf.append(bucket.getName());
+			strBuf.append("</ul>");
 		}
-		return "testing";
+		strBuf.append("</li>");
+		return strBuf.toString();
 	}
 	
 	public String uploadFile(MultipartFile multipartFile) {
